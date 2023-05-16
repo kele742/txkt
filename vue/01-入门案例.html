@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./vue.min.js"></script>
+    <div id="app">
+        <!-- 差值表达式,通过此取到变量date中的值 -->
+        {{message}}
+    </div>
+    <script>
+        new Vue({
+            el:'#app',//指定Vue在哪个标签中进行显示
+            data:{//初始值
+                message:'hello vue'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
