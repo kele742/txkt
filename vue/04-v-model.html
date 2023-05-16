@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+
+<body>
+ <div id="app">
+    <input type="text" :value="message"/>
+    <!-- v-bind可以省略，就直接加冒号 -->
+    <br/>
+    {{message}}
+    <input type="text" v-model="message"/>
+    <!--
+        单向绑定之后变动该值其余地方不会跟着变，但是双向绑定，变动之后只要变量名是这个就会跟着变
+         如果v-model后面是vaule，是可以省略的
+     -->
+     
+ </div>
+ <script src="vue.min.js"></script>
+ <script>
+ new Vue({
+ el: '#app',
+ data: {
+    message:'hello vue',
+ }
+ })
+ </script>
+</body>
+
+</html>
