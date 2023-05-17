@@ -10,16 +10,16 @@
 
 <body>
  <div id="app">
-    <input type="text" :value="message"/>
+    <input type="text" :value="message"/><!-- 单向绑定 -->
     <!-- v-bind可以省略，就直接加冒号 -->
     <br/>
     {{message}}
-    <input type="text" v-model="message"/>
+    <input type="text" v-model="message"/><!-- 双向绑定 -->
     <!--
         单向绑定之后变动该值其余地方不会跟着变，但是双向绑定，变动之后只要变量名是这个就会跟着变
          如果v-model后面是vaule，是可以省略的
      -->
-     
+
  </div>
  <script src="vue.min.js"></script>
  <script>
