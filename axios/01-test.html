@@ -10,7 +10,13 @@
 
 <body>
     <div id="app">
+        <table>
+            <tr v-for="user in userList">
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
 
+            </tr>
+        </table>
     </div>
     <script src="vue.min.js"></script>
     <script src="axios.min.js"></script>
@@ -29,7 +35,8 @@
                 getList(){
                     axios.get('data.json')
                     .then(response =>{//信息通过response返回
-                        console.log(response)
+                        //console.log(response)
+                        this.userList = response.data.data.items
                     })//成功
                     .catch(error=>{
                         console.log(error)
